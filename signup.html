@@ -150,9 +150,14 @@ File your details, choose a monkey alias, and step quietly into the softest cons
 <p class="mt-3 text-sm leading-7 text-on-surface">We use this list to send zines, occasional mail, and the occasional hush-hush update. No ad-tech nonsense.</p>
 </div>
 <div class="textured-paper border border-white/50 rounded-xl p-5 shadow-xl stamp">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+<div>
 <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant">Current Status</p>
-<p class="font-headline uppercase font-black tracking-tight text-xl mt-2">Front End Draft</p>
-<p class="mt-3 text-sm leading-7 text-on-surface">This page is ready for design review. The secret tunnel to Airtable gets built next.</p>
+<p class="font-headline uppercase font-black tracking-tight text-xl mt-1">Unlocked: Accepting New Members</p>
+</div>
+</div>
+<p class="mt-3 text-sm leading-7 text-on-surface">The route is open and the intake ledger is active.</p>
 </div>
 <div class="textured-paper border border-white/50 rounded-xl p-5 shadow-xl sm:col-span-2">
 <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant">What We Ask For</p>
@@ -227,11 +232,8 @@ I understand this info is used to send zines, occasional mail, and related email
 </label>
 </div>
 
-<div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-<div class="text-sm leading-7 text-on-surface-variant">
-Submission is not wired up yet. This is the front-end draft for the upcoming Airtable-backed form.
-</div>
-<button class="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary px-6 py-3 rounded-lg font-headline font-black uppercase tracking-tighter hover:rotate-1 transition-transform active:scale-95" type="submit">
+<div class="flex justify-center sm:justify-end">
+<button class="inline-flex min-w-[18rem] items-center justify-center gap-3 bg-primary-container text-on-primary px-8 py-4 rounded-lg font-headline font-black uppercase tracking-tighter text-lg hover:rotate-1 transition-transform active:scale-95" type="submit">
 <span class="material-symbols-outlined text-xl">mail</span>
 Enter the Underground
 </button>
@@ -248,10 +250,6 @@ const banner = document.getElementById("form-status");
 
 if (banner && status) {
     const states = {
-        success: {
-            className: "mb-8 rounded-xl border-2 border-dashed border-primary/40 bg-surface-container-low/90 px-5 py-4 text-sm leading-7 text-on-surface shadow-lg",
-            message: "You are in. The intake went through and your details have been filed for future joy-making operations."
-        },
         invalid: {
             className: "mb-8 rounded-xl border-2 border-dashed border-error/40 bg-error-container/90 px-5 py-4 text-sm leading-7 text-on-error-container shadow-lg",
             message: "Some required intel was missing or malformed. Please check the form and try again."

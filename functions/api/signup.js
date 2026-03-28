@@ -10,10 +10,18 @@ const REQUIRED_FIELDS = [
     "Country"
 ];
 
-function redirect(request, status) {
+function redirectToSignup(request, status) {
     const url = new URL(request.url);
     url.pathname = "/signup.html";
     url.search = `?status=${status}`;
+
+    return Response.redirect(url.toString(), 303);
+}
+
+function redirectToWelcome(request) {
+    const url = new URL(request.url);
+    url.pathname = "/welcome.html";
+    url.search = "";
 
     return Response.redirect(url.toString(), 303);
 }
@@ -30,20 +38,14 @@ function isValidEmail(email) {
 export async function onRequestPost(context) {
     const { request, env } = context;
 
-    console.log("signup env", {
-        hasPat: Boolean(env.AIRTABLE_PAT),
-        baseId: env.AIRTABLE_BASE_ID || null,
-        tableName: env.AIRTABLE_TABLE_NAME || null
-    });
-
     if (!env.AIRTABLE_PAT || !env.AIRTABLE_BASE_ID || !env.AIRTABLE_TABLE_NAME) {
-        return redirect(request, "error");
+        return redirectToSignup(request, "error");
     }
 
     const formData = await request.formData();
 
     if (trimField(formData, "consent") !== "yes") {
-        return redirect(request, "consent");
+        return redirectToSignup(request, "consent");
     }
 
     const fields = {};
@@ -51,7 +53,7 @@ export async function onRequestPost(context) {
     for (const key of REQUIRED_FIELDS) {
         const value = trimField(formData, key);
         if (!value) {
-            return redirect(request, "invalid");
+            return redirectToSignup(request, "invalid");
         }
         fields[key] = value;
     }
@@ -63,13 +65,12 @@ export async function onRequestPost(context) {
 
     const email = fields["Email Address"];
     if (!isValidEmail(email)) {
-        return redirect(request, "invalid");
+        return redirectToSignup(request, "invalid");
     }
 
     fields.Source = "SMU Website";
 
     const endpoint = `https://api.airtable.com/v0/${encodeURIComponent(env.AIRTABLE_BASE_ID)}/${encodeURIComponent(env.AIRTABLE_TABLE_NAME)}`;
-    console.log("signup endpoint", endpoint);
 
     const response = await fetch(endpoint, {
         method: "POST",
@@ -82,13 +83,9 @@ export async function onRequestPost(context) {
         })
     });
 
-    console.log("airtable status", response.status);
-
     if (!response.ok) {
-        console.log("airtable body", await response.text());
-        return redirect(request, "error");
+        return redirectToSignup(request, "error");
     }
 
-    console.log("airtable body", await response.text());
-    return redirect(request, "success");
+    return redirectToWelcome(request);
 }
