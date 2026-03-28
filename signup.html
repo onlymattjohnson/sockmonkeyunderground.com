@@ -129,6 +129,7 @@ body {
 
 <main class="min-h-screen px-6 py-12 md:py-16">
 <section class="max-w-6xl mx-auto">
+<div class="hidden mb-8 rounded-xl border-2 border-dashed px-5 py-4 text-sm leading-7 shadow-lg" id="form-status"></div>
 <div class="grid gap-10 xl:grid-cols-[0.95fr_1.05fr] items-start">
 <div>
 <p class="font-label uppercase tracking-[0.35em] text-xs md:text-sm text-primary mb-4">Next Phase: Field Enrollment</p>
@@ -171,53 +172,54 @@ File your details, choose a monkey alias, and step quietly into the softest cons
 <p class="font-headline uppercase font-black tracking-tight text-2xl text-on-surface">New Member Initiation</p>
 </div>
 
-<form class="px-6 py-8 md:px-8 md:py-9 space-y-8" action="#" method="post" onsubmit="event.preventDefault();">
+<form class="px-6 py-8 md:px-8 md:py-9 space-y-8" action="/api/signup" method="post">
+<input name="Source" type="hidden" value="SMU Website"/>
 <div class="grid gap-6 md:grid-cols-2">
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Monkey Name</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="monkey_name" placeholder="Agent Threadbare, Captain Banana, etc." type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Monkey Name" placeholder="Agent Threadbare, Captain Banana, etc." required="" type="text"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Email Address</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="email" placeholder="you@stitchmail.example" type="email"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Email Address" placeholder="you@stitchmail.example" required="" type="email"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">First Name</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="first_name" placeholder="First name" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="First Name" placeholder="First name" required="" type="text"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Last Name</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="last_name" placeholder="Last name" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Last Name" placeholder="Last name" required="" type="text"/>
 </label>
 <label class="block md:col-span-2">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Mailing Address</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="address_line_1" placeholder="Street address" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Address Line 1" placeholder="Street address" required="" type="text"/>
 </label>
 <label class="block md:col-span-2">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Address Line 2</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="address_line_2" placeholder="Apartment, unit, cave entrance, etc. (optional)" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Address Line 2" placeholder="Apartment, unit, cave entrance, etc. (optional)" type="text"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">City</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="city" placeholder="City" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="City" placeholder="City" required="" type="text"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">State / Region</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="state" placeholder="State or region" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="State" placeholder="State or region" required="" type="text"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Postal Code</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="postal_code" placeholder="Postal code" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Zip" placeholder="Postal code" required="" type="text"/>
 </label>
 <label class="block">
 <span class="block font-label uppercase tracking-[0.22em] text-[11px] text-on-surface-variant mb-2">Country</span>
-<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="country" placeholder="Country" type="text"/>
+<input class="dossier-field w-full rounded-lg px-4 py-3 text-base text-on-surface placeholder:text-on-surface-variant/70" name="Country" placeholder="Country" required="" type="text"/>
 </label>
 </div>
 
 <div class="rounded-xl border-2 border-dashed border-outline/60 bg-surface-container-low/70 p-5">
 <label class="flex items-start gap-3">
-<input class="mt-1 rounded border-outline text-primary focus:ring-primary" name="consent" type="checkbox"/>
+<input class="mt-1 rounded border-outline text-primary focus:ring-primary" name="consent" required="" type="checkbox" value="yes"/>
 <span class="text-sm leading-7 text-on-surface">
 I understand this info is used to send zines, occasional mail, and related email updates, and that it will be handled according to the
 <a class="text-primary font-bold underline decoration-dashed underline-offset-4" href="privacy.html">Privacy Policy</a>.
@@ -239,5 +241,37 @@ Enter the Underground
 </div>
 </section>
 </main>
+<script>
+const params = new URLSearchParams(window.location.search);
+const status = params.get("status");
+const banner = document.getElementById("form-status");
+
+if (banner && status) {
+    const states = {
+        success: {
+            className: "mb-8 rounded-xl border-2 border-dashed border-primary/40 bg-surface-container-low/90 px-5 py-4 text-sm leading-7 text-on-surface shadow-lg",
+            message: "You are in. The intake went through and your details have been filed for future joy-making operations."
+        },
+        invalid: {
+            className: "mb-8 rounded-xl border-2 border-dashed border-error/40 bg-error-container/90 px-5 py-4 text-sm leading-7 text-on-error-container shadow-lg",
+            message: "Some required intel was missing or malformed. Please check the form and try again."
+        },
+        consent: {
+            className: "mb-8 rounded-xl border-2 border-dashed border-error/40 bg-error-container/90 px-5 py-4 text-sm leading-7 text-on-error-container shadow-lg",
+            message: "Please confirm the privacy notice before entering the underground."
+        },
+        error: {
+            className: "mb-8 rounded-xl border-2 border-dashed border-error/40 bg-error-container/90 px-5 py-4 text-sm leading-7 text-on-error-container shadow-lg",
+            message: "The tunnel jammed during submission. Please try again in a moment."
+        }
+    };
+    const state = states[status];
+    if (state) {
+        banner.className = state.className;
+        banner.textContent = state.message;
+        banner.classList.remove("hidden");
+    }
+}
+</script>
 </body>
 </html>
