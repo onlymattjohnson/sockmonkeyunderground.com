@@ -30,6 +30,12 @@ function isValidEmail(email) {
 export async function onRequestPost(context) {
     const { request, env } = context;
 
+    console.log("signup env", {
+        hasPat: Boolean(env.AIRTABLE_PAT),
+        baseId: env.AIRTABLE_BASE_ID || null,
+        tableName: env.AIRTABLE_TABLE_NAME || null
+    });
+
     if (!env.AIRTABLE_PAT || !env.AIRTABLE_BASE_ID || !env.AIRTABLE_TABLE_NAME) {
         return redirect(request, "error");
     }
@@ -63,6 +69,7 @@ export async function onRequestPost(context) {
     fields.Source = "SMU Website";
 
     const endpoint = `https://api.airtable.com/v0/${encodeURIComponent(env.AIRTABLE_BASE_ID)}/${encodeURIComponent(env.AIRTABLE_TABLE_NAME)}`;
+    console.log("signup endpoint", endpoint);
 
     const response = await fetch(endpoint, {
         method: "POST",
@@ -75,9 +82,13 @@ export async function onRequestPost(context) {
         })
     });
 
+    console.log("airtable status", response.status);
+
     if (!response.ok) {
+        console.log("airtable body", await response.text());
         return redirect(request, "error");
     }
 
+    console.log("airtable body", await response.text());
     return redirect(request, "success");
 }
