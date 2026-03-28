@@ -1,0 +1,43 @@
+# ============================================================
+# OpenAI Codex CLI
+# ============================================================
+
+# Project-level Codex config (keep or ignore — your call)
+# Uncomment the next line if you don't want to share project config:
+# .codex/
+
+# Codex-generated session/research artifacts
+.research/
+
+# Codex-generated AGENTS.md (if you treat it as ephemeral)
+# AGENTS.md
+# AGENTS.override.md
+
+# Codex skill files (if generated, not hand-authored)
+# SKILL.md
+
+# Codex session transcripts (local only, in ~/.codex — but just in case)
+*.jsonl
+
+# Codex log files
+codex-tui.log
+*.log
+
+# Common Codex output artifacts (generated reports, analyses, etc.)
+codex-output/
+codex_output/
+.codex-artifacts/
+
+# ============================================================
+# General
+# ============================================================
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
