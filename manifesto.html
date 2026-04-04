@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sock Monkey Underground - The Manifesto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Libre+Bodoni:wght@700&amp;family=Playfair+Display+SC:wght@700;900&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "secondary-fixed-dim": "#ccc5c3",
+                "surface-container-low": "#f9f2ec",
+                "on-tertiary-fixed-variant": "#004397",
+                "secondary-fixed": "#e9e1df",
+                "primary-fixed": "#ffdad4",
+                "on-error": "#ffffff",
+                "tertiary-fixed-dim": "#aec6ff",
+                "secondary": "#625d5c",
+                "primary": "#8f0100",
+                "on-primary-fixed-variant": "#930100",
+                "primary-container": "#b41d11",
+                "on-secondary-container": "#686362",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#e4beb8",
+                "on-primary-fixed": "#410000",
+                "outline": "#8f706b",
+                "surface-container-lowest": "#ffffff",
+                "error": "#ba1a1a",
+                "surface-tint": "#b82013",
+                "surface-dim": "#dfd9d3",
+                "on-surface-variant": "#5b403c",
+                "on-primary-container": "#ffc8bf",
+                "tertiary-fixed": "#d8e2ff",
+                "error-container": "#ffdad6",
+                "on-secondary-fixed-variant": "#4a4645",
+                "on-tertiary-container": "#c4d4ff",
+                "on-background": "#1e1b18",
+                "inverse-surface": "#33302c",
+                "tertiary": "#004192",
+                "surface-container-high": "#eee7e1",
+                "surface-variant": "#e8e1dc",
+                "surface-bright": "#fff8f2",
+                "background": "#fff8f2",
+                "inverse-on-surface": "#f6f0ea",
+                "surface-container-highest": "#e8e1dc",
+                "on-surface": "#1e1b18",
+                "surface-container": "#f3ede7",
+                "surface": "#fff8f2",
+                "on-tertiary": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-error-container": "#93000a",
+                "secondary-container": "#e9e1df",
+                "on-tertiary-fixed": "#001a43",
+                "primary-fixed-dim": "#ffb4a8",
+                "on-secondary-fixed": "#1e1b1a",
+                "inverse-primary": "#ffb4a8",
+                "tertiary-container": "#0057c0"
+            },
+            fontFamily: {
+                "headline": ["Epilogue"],
+                "body": ["Space Grotesk"],
+                "label": ["Space Grotesk"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            }
+        }
+    }
+};
+</script>
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle;
+}
+body {
+    background-image:
+        linear-gradient(rgba(255, 248, 242, 0.42), rgba(255, 248, 242, 0.42)),
+        url("assets/img/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.blueprint-lines {
+    background: repeating-linear-gradient(0deg, transparent, transparent 4px, #1e1b18 4px, #1e1b18 6px);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #1e1b18;
+    filter: drop-shadow(2px 2px 0 rgba(30, 27, 24, 0.1));
+}
+.blueprint-title-font {
+    font-family: "Playfair Display SC", serif;
+    letter-spacing: 0.015em;
+    line-height: 0.9;
+}
+.blueprint-subtitle-font {
+    font-family: "Libre Bodoni", serif;
+    letter-spacing: 0.18em;
+    line-height: 1;
+}
+.textured-paper {
+    background-color: rgba(255, 248, 242, 0.84);
+    backdrop-filter: blur(10px);
+}
+.stamp {
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 0 rgba(143, 1, 0, 0.15);
+}
+</style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+<header class="bg-[#FFF8F2]/80 backdrop-blur-sm border-b-2 border-dashed border-stone-300 sticky top-0 z-50">
+<div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
+<a class="font-headline uppercase tracking-tighter font-black text-[#8F0100] hover:rotate-1 transition-transform inline-flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+<span>Back To HQ</span>
+</a>
+<div class="text-right">
+<div class="font-headline uppercase tracking-[0.2em] text-xs text-on-surface-variant">Sock Monkey Underground</div>
+<div class="font-label uppercase text-[10px] tracking-[0.3em] text-primary">Manifesto</div>
+</div>
+</div>
+</header>
+
+<main class="min-h-screen px-6 py-12 md:py-16">
+<section class="max-w-3xl mx-auto">
+
+  <!-- Label + Heading -->
+  <p class="font-label uppercase tracking-[0.35em] text-xs text-primary mb-4">Articles of Soft Resistance</p>
+  <h1 class="blueprint-title-font text-5xl md:text-7xl uppercase blueprint-lines pb-2 mb-8">The Stitched Manifesto</h1>
+  <div class="text-center mb-8">
+    <span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">policy</span>
+  </div>
+  <blockquote class="border-l-2 border-primary pl-4 mb-10 font-body text-sm md:text-base text-on-surface-variant italic leading-7">We believe that a single missing sock is not a tragedy, but a recruitment. We believe that buttons are badges of honor and that stuffing is our soul.</blockquote>
+
+  <!-- Preamble -->
+  <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant opacity-70 leading-relaxed mb-12">BORN FROM HUMBLE SOCKS AND STITCHED TOGETHER WITH CARE, WE EXIST TO BRING COMFORT, LAUGHTER, AND A LITTLE BIT OF MISCHIEF INTO THE WORLD. OUR MISSION IS SIMPLE: TO BE LOYAL COMPANIONS, FEARLESS ADVENTURERS, AND QUIET LISTENERS WHEN SOMEONE NEEDS A FRIEND.</p>
+
+  <!-- Articles -->
+  <div class="grid gap-6">
+
+    <!-- Article I -->
+    <div class="textured-paper border border-dashed border-on-surface-variant/30 rounded-xl p-6 shadow-lg bg-surface/70">
+      <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant mb-2">Article I</p>
+      <p class="font-headline uppercase font-black tracking-tight text-xl text-on-surface mb-3">On the Dignity of Softness</p>
+      <p class="text-sm leading-7 text-on-surface">We hold that softness is not weakness. It is the most durable material known to heartkind — surviving washers, dryers, luggage carousels, and the occasional toddler. We reject the lie that only hard things endure.</p>
+    </div>
+
+    <!-- Article II -->
+    <div class="textured-paper border border-dashed border-on-surface-variant/30 rounded-xl p-6 shadow-lg bg-surface/70 stamp">
+      <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant mb-2">Article II</p>
+      <p class="font-headline uppercase font-black tracking-tight text-xl text-on-surface mb-3">On the Sacred Duty of the Sidekick</p>
+      <p class="text-sm leading-7 text-on-surface">Every dreamer deserves a witness. We do not seek the spotlight — we hold it steady so others can find their way. The sidekick is not lesser. The sidekick is essential.</p>
+    </div>
+
+    <!-- Article III -->
+    <div class="textured-paper border border-dashed border-on-surface-variant/30 rounded-xl p-6 shadow-lg bg-surface/70">
+      <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant mb-2">Article III</p>
+      <p class="font-headline uppercase font-black tracking-tight text-xl text-on-surface mb-3">On Mischief as a Form of Love</p>
+      <p class="text-sm leading-7 text-on-surface">A well-placed sock monkey in an otherwise serious photograph is not vandalism — it is a gift. Whimsy administered with care is indistinguishable from kindness. We operate accordingly.</p>
+    </div>
+
+    <!-- Article IV -->
+    <div class="textured-paper border border-dashed border-on-surface-variant/30 rounded-xl p-6 shadow-lg bg-surface/70">
+      <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant mb-2">Article IV</p>
+      <p class="font-headline uppercase font-black tracking-tight text-xl text-on-surface mb-3">On the Intelligence of Listening</p>
+      <p class="text-sm leading-7 text-on-surface">We do not interrupt. We do not advise unless asked. We sit, we stay, and we absorb. In a world that rewards talking, we have quietly cornered the market on presence.</p>
+    </div>
+
+    <!-- Article V -->
+    <div class="textured-paper border border-dashed border-on-surface-variant/30 rounded-xl p-6 shadow-lg bg-surface/70 stamp" style="transform: rotate(1deg);">
+      <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant mb-2">Article V</p>
+      <p class="font-headline uppercase font-black tracking-tight text-xl text-on-surface mb-3">On Humble Origins</p>
+      <p class="text-sm leading-7 text-on-surface">We were made from socks. This is not a footnote — it is the whole point. Transformation from the ordinary into something beloved is not a miracle. It is a practice. We practice it daily.</p>
+    </div>
+
+    <!-- Article VI -->
+    <div class="textured-paper border border-dashed border-on-surface-variant/30 rounded-xl p-6 shadow-lg bg-surface/70">
+      <p class="font-label uppercase tracking-[0.28em] text-[10px] text-on-surface-variant mb-2">Article VI</p>
+      <p class="font-headline uppercase font-black tracking-tight text-xl text-on-surface mb-3">On the Underground Itself</p>
+      <p class="text-sm leading-7 text-on-surface">We are not a company. We are a conspiracy of the warm-hearted. There are no membership cards, no ranks, no uniforms — only a shared belief that the world is improved by small, soft, ridiculous acts of care. You are already one of us.</p>
+    </div>
+
+  </div>
+
+  <!-- Button pair -->
+  <div class="flex flex-wrap gap-4 justify-center mt-8 mb-16">
+    <a href="signup.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-headline font-black uppercase tracking-tighter hover:rotate-1 transition-transform active:scale-95 inline-flex items-center">Join the Revolution</a>
+    <a href="index.html" class="border-2 border-dashed border-on-surface/30 px-6 py-2 rounded-lg font-headline font-black uppercase tracking-tighter hover:-rotate-1 transition-transform active:scale-95 inline-flex items-center">Back to HQ</a>
+  </div>
+
+</section>
+</main>
+<footer class="max-w-3xl mx-auto mt-4 pb-12 text-center">
+<p class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant opacity-50 mb-3">Your secrets are safe in the lint trap</p>
+<a class="font-label uppercase tracking-[0.25em] text-xs text-on-surface-variant hover:text-primary transition-colors" href="privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
