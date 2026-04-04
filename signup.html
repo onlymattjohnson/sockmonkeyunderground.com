@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sock Monkey Underground - Join The SMU</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Libre+Bodoni:wght@700&amp;family=Playfair+Display+SC:wght@700;900&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
 tailwind.config = {
@@ -83,18 +83,31 @@ tailwind.config = {
     vertical-align: middle;
 }
 body {
-    background-image: url(https://lh3.googleusercontent.com/aida/ADBb0ujh0PZuzlGIRw9FsVgWtuXqI_15ObRm1jxfaGkGCKyVMbjWyriAQl7518qi5RsDNHbvb6ECVjJjGp3LI1zv_88lm53X2QKED_B3CkzgAyjqaZK2ZX1MpS1WwJHa3CuTgI_Kl0ET7QOGHaAHrbYuSW_SokXoCyZ71q4cJ_UjKGXnVtMVPvAAIz0jJ3ogeIllA8gyvYn56vuLJzgP62dLSE_wZo-H7Iht8mNNUGgI2CC9mF_DTQPOQEmzVPRfTJSDcfQoacX1dnI-);
+    background-image:
+        linear-gradient(rgba(255, 248, 242, 0.42), rgba(255, 248, 242, 0.42)),
+        url("assets/img/bg.png");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .blueprint-lines {
     background: repeating-linear-gradient(0deg, transparent, transparent 4px, #1e1b18 4px, #1e1b18 6px);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #1e1b18;
+    -webkit-text-stroke: 1.5px #1e1b18;
     filter: drop-shadow(2px 2px 0 rgba(30, 27, 24, 0.1));
+}
+.blueprint-title-font {
+    font-family: "Playfair Display SC", serif;
+    letter-spacing: 0.015em;
+    line-height: 0.9;
+}
+.blueprint-subtitle-font {
+    font-family: "Libre Bodoni", serif;
+    letter-spacing: 0.18em;
+    line-height: 1;
 }
 .textured-paper {
     background-color: rgba(255, 248, 242, 0.84);
@@ -134,10 +147,10 @@ body {
 <div class="grid gap-10 xl:grid-cols-[0.95fr_1.05fr] items-start">
 <div>
 <p class="font-label uppercase tracking-[0.35em] text-xs md:text-sm text-primary mb-4">Next Phase: Field Enrollment</p>
-<h1 class="font-headline font-[900] text-5xl md:text-7xl lg:text-8xl tracking-tighter uppercase leading-[0.88] blueprint-lines pb-2">
+<h1 class="blueprint-title-font text-5xl md:text-7xl lg:text-8xl uppercase blueprint-lines pb-2">
 Join
 </h1>
-<h2 class="font-headline font-[300] text-3xl md:text-5xl tracking-[0.18em] uppercase leading-none text-on-surface mt-2">
+<h2 class="blueprint-subtitle-font text-3xl md:text-5xl uppercase text-on-surface mt-3">
 The SMU
 </h2>
 <p class="mt-8 max-w-2xl text-lg md:text-xl text-on-surface-variant italic">

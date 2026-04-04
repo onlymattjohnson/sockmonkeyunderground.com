@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sock Monkey Underground - Mission In Progress</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Libre+Bodoni:wght@700&amp;family=Playfair+Display+SC:wght@700;900&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -76,18 +76,31 @@
     vertical-align: middle
     }
 body {
-    background-image: url(https://lh3.googleusercontent.com/aida/ADBb0ujh0PZuzlGIRw9FsVgWtuXqI_15ObRm1jxfaGkGCKyVMbjWyriAQl7518qi5RsDNHbvb6ECVjJjGp3LI1zv_88lm53X2QKED_B3CkzgAyjqaZK2ZX1MpS1WwJHa3CuTgI_Kl0ET7QOGHaAHrbYuSW_SokXoCyZ71q4cJ_UjKGXnVtMVPvAAIz0jJ3ogeIllA8gyvYn56vuLJzgP62dLSE_wZo-H7Iht8mNNUGgI2CC9mF_DTQPOQEmzVPRfTJSDcfQoacX1dnI-);
+    background-image:
+        linear-gradient(rgba(255, 248, 242, 0.42), rgba(255, 248, 242, 0.42)),
+        url("assets/img/bg.png");
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    background-position: center;
     }
 .blueprint-lines {
     background: repeating-linear-gradient(0deg, transparent, transparent 4px, #1e1b18 4px, #1e1b18 6px);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #1e1b18;
+    -webkit-text-stroke: 1.5px #1e1b18;
     filter: drop-shadow(2px 2px 0 rgba(30, 27, 24, 0.1))
+    }
+.blueprint-title-font {
+    font-family: "Playfair Display SC", serif;
+    letter-spacing: 0.015em;
+    line-height: 0.9;
+    }
+.blueprint-subtitle-font {
+    font-family: "Libre Bodoni", serif;
+    letter-spacing: 0.18em;
+    line-height: 1;
     }
 .ink-stamp {
     transform: rotate(-2deg);
@@ -112,35 +125,35 @@ body {
 </a>
 </div>
 </header>
-<main class="min-h-screen pt-16 pb-20 px-6">
+<main class="min-h-screen pt-6 pb-20 px-6">
 <!-- Hero Branding Section -->
-<section class="max-w-6xl mx-auto text-center mb-16">
-<div class="inline-flex flex-col items-center w-full mb-12">
-<h1 class="font-headline font-[900] text-7xl md:text-9xl tracking-tighter uppercase leading-[0.85] blueprint-lines pb-2">
+<section class="max-w-6xl mx-auto text-center mb-8">
+<div class="inline-flex flex-col items-center w-full mb-6">
+<h1 class="blueprint-title-font text-7xl md:text-9xl uppercase blueprint-lines pb-2">
                 Sock Monkey
             </h1>
-<h2 class="font-headline font-[300] text-5xl md:text-8xl tracking-[0.15em] uppercase leading-none text-on-surface mt-2">
+<h2 class="blueprint-subtitle-font text-4xl md:text-6xl uppercase text-on-surface mt-3">
                 Underground
             </h2>
 </div>
-<div class="relative inline-block mt-8">
+<!-- <div class="relative inline-block mt-8">
 <h1 class="font-headline font-black text-6xl md:text-8xl lg:text-9xl text-on-surface uppercase tracking-tighter leading-none mb-4 relative z-10">
 <span class="block">STAY</span>
 <span class="block text-primary">STITCHED.</span>
-</h1>
+</h1> -->
 <!-- Decorative Horizontal Lines -->
-<div class="absolute inset-0 flex flex-col justify-center space-y-4 opacity-10 -z-0">
-<div class="h-4 bg-on-surface w-full"></div>
-<div class="h-4 bg-on-surface w-full"></div>
-<div class="h-4 bg-on-surface w-full"></div>
-</div>
-</div>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto mt-12 font-medium italic">
+<!-- <div class="absolute inset-0 flex flex-col justify-center space-y-4 opacity-10 -z-0"> -->
+<!-- <div class="h-4 bg-on-surface w-full"></div> -->
+<!-- <div class="h-4 bg-on-surface w-full"></div>/ -->
+<!-- <div class="h-4 bg-on-surface w-full"></div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto mt-12 font-medium italic">
             "We're currently repairing a loose seam in the mainframe. The revolution will resume once the stuffing is secure."
-        </p>
+        </p> -->
 </section>
 <!-- The Scissors Divider -->
-<div class="max-w-4xl mx-auto flex items-center gap-4 mb-20 opacity-40">
+<div class="max-w-4xl mx-auto flex items-center gap-4 mb-12 opacity-40">
 <div class="flex-grow border-b-2 border-dashed border-on-surface"></div>
 <span class="material-symbols-outlined text-4xl">content_cut</span>
 <div class="flex-grow border-b-2 border-dashed border-on-surface"></div>
