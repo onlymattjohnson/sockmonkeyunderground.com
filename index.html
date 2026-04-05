@@ -121,7 +121,11 @@ body {
 .textured-paper {
     background-color: rgba(255, 248, 242, 0.3);
     backdrop-filter: blur(2px)
-    }</style>
+    }
+.hero-mark {
+    filter: drop-shadow(0 10px 18px rgba(30, 27, 24, 0.16));
+    }
+</style>
 </head>
 <body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
@@ -136,14 +140,15 @@ body {
 </header>
 <main class="min-h-screen pt-6 pb-20 px-6">
 <!-- Hero Branding Section -->
-<section class="max-w-6xl mx-auto text-center mb-8">
-<div class="inline-flex flex-col items-center w-full mb-6">
+<section class="max-w-6xl mx-auto text-center mb-8 relative">
+<div class="inline-flex flex-col items-center w-full">
 <h1 class="blueprint-title-font text-7xl md:text-9xl uppercase blueprint-lines pb-2">
                 Sock Monkey
             </h1>
 <h2 class="blueprint-subtitle-font text-4xl md:text-6xl uppercase text-on-surface mt-3">
                 Underground
             </h2>
+<img alt="Sock Monkey Underground mark" class="hero-mark mt-2 w-20 sm:w-24 md:w-28 lg:w-32 rotate-3" src="assets/img/smu-full.png"/>
 </div>
 <!-- <div class="relative inline-block mt-8">
 <h1 class="font-headline font-black text-6xl md:text-8xl lg:text-9xl text-on-surface uppercase tracking-tighter leading-none mb-4 relative z-10">
