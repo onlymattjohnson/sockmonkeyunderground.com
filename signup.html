@@ -125,6 +125,9 @@ body {
     border-color: #8f0100;
     box-shadow: none;
 }
+.hero-mark {
+    filter: drop-shadow(0 10px 18px rgba(30, 27, 24, 0.16));
+}
 </style>
 </head>
 <body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
@@ -147,12 +150,17 @@ body {
 <div class="grid gap-10 xl:grid-cols-[0.95fr_1.05fr] items-start">
 <div>
 <p class="font-label uppercase tracking-[0.35em] text-xs md:text-sm text-primary mb-4">Next Phase: Field Enrollment</p>
+<div class="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:gap-6">
+<div>
 <h1 class="blueprint-title-font text-5xl md:text-7xl lg:text-8xl uppercase blueprint-lines pb-2">
 Join
 </h1>
 <h2 class="blueprint-subtitle-font text-3xl md:text-5xl uppercase text-on-surface mt-3">
 The SMU
 </h2>
+</div>
+<img alt="Sock Monkey Underground mark" class="hero-mark w-20 sm:w-24 md:w-28 rotate-3 sm:mb-2" src="assets/img/smu-full.png"/>
+</div>
 <p class="mt-8 max-w-2xl text-lg md:text-xl text-on-surface-variant italic">
 File your details, choose a monkey alias, and step quietly into the softest conspiracy in the postal system.
 </p>
