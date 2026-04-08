@@ -125,6 +125,47 @@ body {
 .hero-mark {
     filter: drop-shadow(0 10px 18px rgba(30, 27, 24, 0.16));
     }
+.welcome-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1rem;
+    border: 2px dashed rgba(143, 1, 0, 0.28);
+    border-radius: 9999px;
+    background: rgba(255, 248, 242, 0.74);
+    box-shadow: 0 8px 22px rgba(30, 27, 24, 0.08);
+    backdrop-filter: blur(4px);
+    transform: rotate(-1.2deg);
+    }
+.welcome-badge::before {
+    content: "";
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 9999px;
+    background: #b41d11;
+    box-shadow: 0 0 0 3px rgba(180, 29, 17, 0.14);
+    flex-shrink: 0;
+    }
+.welcome-badge span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: rgba(30, 27, 24, 0.8);
+    }
+@media (max-width: 640px) {
+    .welcome-badge {
+        padding: 0.75rem 0.9rem;
+        border-radius: 1.25rem;
+        transform: none;
+    }
+    .welcome-badge span {
+        font-size: 0.64rem;
+        letter-spacing: 0.18em;
+    }
+    }
 </style>
 </head>
 <body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
@@ -176,6 +217,11 @@ body {
 <div class="flex flex-wrap gap-4 justify-center mt-8 mb-16">
   <a href="signup.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-headline font-black uppercase tracking-tighter hover:rotate-1 transition-transform active:scale-95 inline-flex items-center">Join the Revolution</a>
   <a href="manifesto.html" class="border-2 border-dashed border-on-surface/30 px-6 py-2 rounded-lg font-headline font-black uppercase tracking-tighter hover:-rotate-1 transition-transform active:scale-95 inline-flex items-center">Read the Manifesto</a>
+</div>
+<div class="flex justify-center mb-16 px-4 -mt-8">
+<p class="welcome-badge max-w-xl text-center">
+<span>Sock monkey is a state of mind - all plushies are welcome.</span>
+</p>
 </div>
 <!-- Tactical Agent Files -->
 <section class="max-w-6xl mx-auto mb-20">
