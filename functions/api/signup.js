@@ -63,6 +63,11 @@ export async function onRequestPost(context) {
         fields["Address Line 2"] = optionalAddress2;
     }
 
+    const optionalInstagram = trimField(formData, "Instagram Username");
+    if (optionalInstagram) {
+        fields["Instagram Username"] = optionalInstagram;
+    }
+
     const email = fields["Email Address"];
     if (!isValidEmail(email)) {
         return redirectToSignup(request, "invalid");
