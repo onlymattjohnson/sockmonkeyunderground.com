@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
     <link rel="icon" href="data:," />
     <title>Christmas Movie Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +13,7 @@
       button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
       * { box-sizing: border-box; }
       :root {
-        --bg: #edf2ec;
+        --bg: #fff8f2;
         --bg-deep: #dce8dc;
         --surface: #ffffff;
         --surface-2: #f4f7f1;
@@ -30,30 +30,17 @@
         --chip-bg: #ffffff;
         --shadow: 0 18px 40px rgba(18, 60, 36, .16);
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #0d1811;
-          --bg-deep: #0a130d;
-          --surface: #17251c;
-          --surface-2: #1d2f23;
-          --ink: #f0ead9;
-          --ink-soft: #b3bfae;
-          --pine: #7fc48f;
-          --pine-deep: #0e2a1a;
-          --cranberry: #e0686e;
-          --cranberry-deep: #b23a41;
-          --hat-red: #ef7a63;
-          --gold: #d9a441;
-          --gold-bright: #eec26a;
-          --line: #2c4433;
-          --chip-bg: #1d2f23;
-          --shadow: 0 18px 40px rgba(0, 0, 0, .45);
-        }
-      }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
         background: var(--bg);
+        background-image:
+          linear-gradient(rgba(255, 248, 242, 0.42), rgba(255, 248, 242, 0.42)),
+          url("../assets/img/bg.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
         color: var(--ink);
         font-family: "Nunito Sans", system-ui, sans-serif;
         font-size: 1rem;
@@ -69,10 +56,10 @@
         content: ""; position: absolute; inset: auto 0 0 0; height: 45%;
         background: linear-gradient(to bottom, transparent, var(--bg));
       }
-      .hero-text { position: relative; margin-top: -3.2rem; text-align: center; padding: 0 .5rem; z-index: 1; }
+      .hero-text { position: relative; margin-top: -4.5rem; text-align: center; padding: 0 .5rem; z-index: 1; }
       /* the tagline sits at the very top of the page, ABOVE the banner photo,
          on the plain page background — an earlier version tucked it into the
-         hero-text block, where the -3.2rem overlap pulled it up onto the
+         hero-text block, where the negative margin pulled it up onto the
          faded bottom edge of the banner image and the thin script all but
          disappeared into the picture on a phone screen */
       .hero-tagline {
@@ -102,7 +89,6 @@
       }
       .chip:hover { border-color: var(--pine); }
       .chip[aria-pressed="true"] { background: var(--pine); border-color: var(--pine); color: #fff; }
-      @media (prefers-color-scheme: dark) { .chip[aria-pressed="true"] { color: #0e2a1a; } }
       select {
         font: inherit; font-weight: 700; color: var(--ink); background: var(--chip-bg);
         border: 1.5px solid var(--line); border-radius: 10px; padding: .45rem .7rem; min-height: 2.5rem;
@@ -301,7 +287,6 @@
         border: 1.5px solid var(--pine); min-height: 2.75rem;
       }
       .btn-solid { background: var(--pine); color: #fff; }
-      @media (prefers-color-scheme: dark) { .btn-solid { color: #0e2a1a; } }
       .btn-ghost { background: transparent; color: var(--pine); }
       .btn:hover { filter: brightness(1.07); }
 
